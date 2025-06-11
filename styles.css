@@ -1,7 +1,7 @@
 /* ─── Reset & Base ─── */
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-/* ─── 背景图 + 全屏蒙版 ─── */
+/* ─── 背景图 + 蒙版 ─── */
 body{
   font-family:"Times New Roman",Times,serif;
   background:url("Chicago.jpg") no-repeat center/cover fixed;
@@ -9,13 +9,13 @@ body{
   line-height:1.6;
   position:relative;
 }
-/* 更厚、更模糊的白色覆盖层 */
+/* 白蒙版透明度 0.6（提高背景清晰度） */
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(255,255,255,0.85);
-  backdrop-filter:blur(2px);
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(1px);   /* 轻微柔化 */
   pointer-events:none;
   z-index:-1;
 }
@@ -34,38 +34,65 @@ body::before{
   width:280px;
   flex-shrink:0;
 }
-/* 半透明白底包裹侧边栏内容，防炫光 */
-.sidebar > .profile{
-  background:rgba(255,255,255,0.9);
+/* 半透明白底包裹侧边栏内容 */
+.profile{
+  background:rgba(255,255,255,0.92);
   border:1px solid #e5e7eb;
   border-radius:8px;
   padding:24px 16px;
   text-align:center;
   box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
-
-/* 头像 & 文本 */
-.avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:20px;border:4px solid #ddd;}
+.avatar{
+  width:160px;height:160px;border-radius:50%;
+  object-fit:cover;margin-bottom:20px;border:4px solid #ddd;
+}
 .profile h1{font-size:1.8rem;margin-bottom:8px;color:#003366;}
 .profile .sub{font-size:.95rem;color:#444;margin-bottom:4px;}
 
-/* 图标行 */
-.social-links{margin-top:18px;display:flex;justify-content:center;gap:18px;}
-.social-links a{color:#555;font-size:1.3rem;transition:color .2s;}
+/* 顶部小图标行 */
+.social-links{
+  margin-top:18px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+.social-links a{
+  color:#555;
+  font-size:1.3rem;
+  transition:color .2s;
+}
 .social-links a:hover{color:#1e40af;}
 
-/* 纯文本行 */
-.plain-links{margin-top:14px;line-height:1.4;}
-.plain-links a{color:#1e40af;text-decoration:none;}
-.plain-links a:hover{text-decoration:underline;}
+/* 图标 + 文字纵向列表 */
+.icon-text-list{
+  list-style:none;
+  margin-top:18px;
+  text-align:left;
+}
+.icon-text-list li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+  font-size:1rem;
+  color:#333;
+}
+.icon-text-list i{
+  font-size:1.2rem;
+  width:20px;
+}
+.icon-text-list a{
+  color:#333;
+  text-decoration:none;
+}
+.icon-text-list a:hover{color:#1e40af;text-decoration:underline;}
 
 /* ─── 主内容 ─── */
-.main-content{
-  flex:1;
-}
-/* 给主内容加半透明白底 */
+.main-content{flex:1;}
+/* 主内容白底容器 */
 .main-content-inner{
-  background:rgba(255,255,255,0.92);
+  background:rgba(255,255,255,0.94);
   border:1px solid #e5e7eb;
   border-radius:8px;
   padding:32px 32px 48px;
@@ -80,19 +107,14 @@ main h2{
   padding-left:12px;
   color:#003366;
 }
-
 main section{margin-bottom:48px;}
 #about p{font-size:1rem;color:#222;}
 
-/* News */
-#news ul{list-style:disc inside;margin-left:12px;}
-#news li{margin-bottom:6px;font-size:.95rem;}
+/* News & Interests 列表 */
+#news ul,#interests ul{list-style:disc inside;margin-left:12px;}
+#news li,#interests li{margin-bottom:6px;font-size:.96rem;}
 
-/* Interests */
-#interests ul{list-style:disc inside;margin-left:12px;}
-#interests li{margin-bottom:6px;font-size:.98rem;}
-
-/* ─── Publications ─── */
+/* ─── Publication Cards ─── */
 .pub-card{
   display:flex;
   background:#f8fafc;
@@ -106,7 +128,10 @@ main section{margin-bottom:48px;}
 .pub-info h3{font-size:1.1rem;margin-bottom:8px;color:#003366;}
 .pub-info .authors{font-size:.9rem;color:#555;margin-bottom:6px;}
 .pub-info .venue{font-size:.88rem;font-style:italic;color:#777;margin-bottom:12px;}
-.links a{text-decoration:none;color:#2563eb;font-size:.9rem;display:inline-flex;align-items:center;gap:6px;}
+.links a{
+  text-decoration:none;color:#2563eb;font-size:.9rem;
+  display:inline-flex;align-items:center;gap:6px;
+}
 .links a:hover{text-decoration:underline;}
 
 /* ─── Responsive ─── */
