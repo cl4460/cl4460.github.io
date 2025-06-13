@@ -19,7 +19,7 @@ body::before{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(255,255,255,0.05);   /* ← 透明度更低，背景更清晰 */
+  background:rgba(255,255,255,0.0);   /* ← 透明度更低，背景更清晰 */
   backdrop-filter:blur(0.2px);         /* 轻微柔化；如需极锐利可改 0px */
   pointer-events:none;
   z-index:-1;
