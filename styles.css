@@ -6,7 +6,7 @@ body{
   font-family:"Times New Roman",Times,serif;
   background:url("Chicago.jpg") no-repeat center/cover fixed;
 
-  /* ↑↑ 若想再亮，调 0.98-1.05；想暗调 0.9-0.95 */
+  /* 全局亮度已确认合适 */
   filter:brightness(0.98) saturate(1);
 
   color:#111;
@@ -14,13 +14,13 @@ body{
   position:relative;
 }
 
-/* 半透明蒙版：α=0.22 更通透；blur=0.2px 几乎清晰 */
+/* -------- 白色蒙版：α 调成 0.15 -------- */
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(255,255,255,0.22);
-  backdrop-filter:blur(0.2px);
+  background:rgba(255,255,255,0.15);   /* ← 透明度更低，背景更清晰 */
+  backdrop-filter:blur(0.2px);         /* 轻微柔化；如需极锐利可改 0px */
   pointer-events:none;
   z-index:-1;
 }
@@ -74,6 +74,7 @@ body::before{
   padding:32px 32px 48px;
   box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
+
 main h2{
   font-size:1.6rem;margin-bottom:16px;
   border-left:4px solid #2563eb;padding-left:12px;color:#003366;
