@@ -34,7 +34,7 @@ body::before{
 /* ========= Sidebar ========= */
 .sidebar{width:280px;flex-shrink:0;}
 .profile{
-  background:rgba(255,255,255,0.75);      /* α 改为 0.70 */
+  background:rgba(255,255,255,0.80);      /* α 改为 0.70 */
   border:1px solid #e5e7eb;
   border-radius:8px;
   padding:24px 16px;
@@ -87,7 +87,7 @@ body::before{
 /* ========= Main Content ========= */
 .main-content{flex:1;}
 .main-content-inner{
-  background:rgba(255,255,255,0.75);      /* α 改为 0.70 */
+  background:rgba(255,255,255,0.80);      /* α 改为 0.70 */
   border:1px solid #e5e7eb;
   border-radius:8px;
   padding:32px 32px 48px;
