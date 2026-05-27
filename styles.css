@@ -104,6 +104,17 @@ main h2{
 main section{margin-bottom:48px;}
 #about p{font-size:1rem;color:#222;}
 
+/* Experience */
+#experience ul{
+  list-style:disc inside;
+  margin-left:12px;
+}
+#experience li{
+  margin-bottom:8px;
+  font-size:.96rem;
+  line-height:1.5;
+}
+
 /* News & Interests */
 #news ul,
 #interests ul{
