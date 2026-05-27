@@ -200,11 +200,30 @@ main section{margin-bottom:48px;}
   gap: 14px;
 }
 
+.experience-image {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.experience-image img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
 .experience-item {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px 24px;
-  align-items: start;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px 20px;
+  align-items: center;
   background: #f8fafc;
   border: 1px solid #e5e7eb;
   border-left: 4px solid #2563eb;
@@ -243,11 +262,12 @@ main section{margin-bottom:48px;}
 
 @media(max-width:700px) {
   .experience-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
   }
 
   .experience-meta {
     text-align: left;
     white-space: normal;
+    grid-column: 1 / -1;
   }
 }
