@@ -123,21 +123,27 @@ main section{margin-bottom:48px;}
 /* ========= Publication Cards ========= */
 .pub-card{
   display:flex;
-  align-items:center;
-  background:#f8fafc;
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
-  margin-bottom:24px;
+  align-items:flex-start;
+  gap:18px;
+  background:rgba(248,250,252,.72);
+  border:1px solid rgba(203,213,225,.72);
+  border-radius:6px;
+  overflow:visible;
+  box-shadow:0 2px 8px rgba(15,23,42,.035);
+  margin-bottom:16px;
+  padding:12px 14px;
 }
 
 .pub-image{
-  flex:0 0 230px;
-  width:230px;
+  flex:0 0 260px;
+  width:260px;
   height:auto;
   min-height:0;
   position:static;
   line-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   background:transparent;
   border-right:none;
   overflow:visible;
@@ -154,42 +160,53 @@ main section{margin-bottom:48px;}
   object-position:center center;
   padding:0;
   box-sizing:border-box;
+  background:#fff;
+  border:1px solid #cbd5e1;
+  box-shadow:0 2px 6px rgba(15,23,42,.08);
 }
 
 .pub-info{
-  padding:16px 20px;
+  padding:0;
   flex:1;
+  min-width:0;
 }
 
 .pub-info h3{
   font-size:1.1rem;
-  margin-bottom:8px;
+  line-height:1.32;
+  margin-bottom:4px;
   color:#003366;
 }
 
 .pub-info .authors{
   font-size:.9rem;
+  line-height:1.36;
   color:#555;
-  margin-bottom:6px;
+  margin-bottom:3px;
 }
 
 .pub-info .venue{
   font-size:.88rem;
+  line-height:1.32;
   font-style:italic;
   color:#777;
-  margin-bottom:12px;
+  margin-bottom:8px;
 }
 
-.links a{
+.pub-info .links{
+  line-height:1.2;
+}
+
+.pub-info .links a{
   text-decoration:none;
   color:#2563eb;
-  font-size:.9rem;
+  font-size:.88rem;
   display:inline-flex;
   align-items:center;
-  gap:6px;
+  gap:5px;
 }
 
-.links a:hover{
+.pub-info .links a:hover{
   text-decoration:underline;
 }
 
