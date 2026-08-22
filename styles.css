@@ -292,6 +292,21 @@ main section{margin-bottom:48px;}
   object-fit:contain;
 }
 
+.experience-image--ailab{
+  align-items:flex-start;
+  justify-content:flex-start;
+  overflow:hidden;
+}
+
+.experience-image--ailab img{
+  flex:none;
+  width:300%;
+  max-width:none;
+  height:auto;
+  object-fit:initial;
+  transform:translate(-1.2%,-38.2%);
+}
+
 .experience-main{
   flex:1;
   min-width:0;
