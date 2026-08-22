@@ -293,9 +293,9 @@ main section{margin-bottom:48px;}
 }
 
 .experience-image--ailab{
-  flex-basis:320px;
-  width:320px;
-  height:52px;
+  flex-basis:112px;
+  width:112px;
+  height:32px;
   align-items:flex-start;
   justify-content:flex-start;
   background:#fff;
@@ -352,9 +352,9 @@ main section{margin-bottom:48px;}
   }
 
   .experience-image--ailab{
-    flex-basis:100%;
-    width:100%;
-    height:52px;
+    flex-basis:100px;
+    width:100px;
+    height:30px;
   }
 
   .experience-main{
@@ -368,7 +368,4 @@ main section{margin-bottom:48px;}
     margin-left:116px;
   }
 
-  .experience-image--ailab ~ .experience-meta{
-    margin-left:0;
-  }
 }
