@@ -166,9 +166,8 @@ main section{margin-bottom:48px;}
   box-shadow:none;
 }
 
-.pub-image--geometry{
-  flex-basis:162px;
-  width:162px;
+.pub-image--geometry img{
+  object-fit:fill;
 }
 
 .pub-info{
@@ -248,10 +247,6 @@ main section{margin-bottom:48px;}
     height:100%;
   }
 
-  .pub-image--geometry{
-    width:100%;
-    aspect-ratio:1592 / 1372;
-  }
 }
 
 /* ========= Experience Cards ========= */
