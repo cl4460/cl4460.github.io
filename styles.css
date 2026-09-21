@@ -166,7 +166,8 @@ main section{margin-bottom:48px;}
   box-shadow:none;
 }
 
-.pub-image--geometry img{
+.pub-image--geometry img,
+.pub-image--sycophancy img{
   object-fit:fill;
 }
 
