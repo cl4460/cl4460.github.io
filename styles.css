@@ -120,6 +120,23 @@ main section{margin-bottom:48px;}
   font-size:.96rem;
 }
 
+/* ========= Academic Service ========= */
+.service-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  list-style:none;
+}
+
+.service-list li{
+  padding:8px 16px;
+  background:rgba(248,250,252,.72);
+  border:1px solid rgba(203,213,225,.72);
+  border-radius:6px;
+  color:#003366;
+  font-size:.96rem;
+}
+
 /* ========= Publication Cards ========= */
 .pub-card{
   display:flex;
@@ -137,7 +154,7 @@ main section{margin-bottom:48px;}
 .pub-image{
   flex:0 0 260px;
   width:260px;
-  height:140px;
+  height:auto;
   min-height:0;
   position:static;
   line-height:0;
@@ -157,7 +174,7 @@ main section{margin-bottom:48px;}
   position:static;
   inset:auto;
   width:100%;
-  height:100%;
+  height:auto;
   object-fit:contain;
   object-position:center center;
   padding:0;
@@ -166,15 +183,11 @@ main section{margin-bottom:48px;}
   box-shadow:none;
 }
 
-.pub-image--geometry img,
-.pub-image--sycophancy img{
-  object-fit:fill;
-}
-
 .pub-info{
   padding:0;
   flex:1;
   min-width:0;
+  overflow-wrap:anywhere;
 }
 
 .pub-info h3{
@@ -240,12 +253,11 @@ main section{margin-bottom:48px;}
     width:100%;
     flex:0 0 auto;
     height:auto;
-    aspect-ratio:13 / 7;
   }
 
   .pub-image img{
     width:100%;
-    height:100%;
+    height:auto;
   }
 
 }
