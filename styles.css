@@ -120,6 +120,11 @@ main section{margin-bottom:48px;}
   font-size:.96rem;
 }
 
+#interests a{
+  color:inherit;
+  text-decoration:none;
+}
+
 /* ========= Academic Service ========= */
 .service-list{
   display:flex;
@@ -154,7 +159,7 @@ main section{margin-bottom:48px;}
 .pub-image{
   flex:0 0 260px;
   width:260px;
-  height:auto;
+  height:140px;
   aspect-ratio:13 / 7;
   min-height:0;
   position:relative;
