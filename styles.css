@@ -348,6 +348,10 @@ main section{margin-bottom:48px;}
   color:#003366;
 }
 
+#exploration .experience-main h3{
+  overflow-wrap:anywhere;
+}
+
 .experience-main p{
   margin:0;
   font-size:.94rem;
