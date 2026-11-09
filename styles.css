@@ -385,11 +385,12 @@ main section{margin-bottom:48px;}
 
 /* Use the shared experience card and icon dimensions for both sections. */
 .experience-image--exploration{
+  align-self:center;
   overflow:hidden;
 }
 
 .experience-image--exploration img{
-  object-fit:fill;
+  object-fit:contain;
 }
 
 /* Crop only the surrounding background in the supplied square logos. */
