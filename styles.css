@@ -271,7 +271,9 @@ main section{margin-bottom:48px;}
 
 /* ========= Experience Cards ========= */
 .experience-list{
-  margin:1em 0 1.5em;
+  container-type:inline-size;
+  width:96%;
+  margin:1em auto 1.5em;
   display:flex;
   flex-direction:column;
   gap:12px;
@@ -281,7 +283,7 @@ main section{margin-bottom:48px;}
   display:flex;
   align-items:center;
   gap:16px;
-  min-height:72px;
+  min-height:104px;
   background:#fff;
   border:1px solid #e5e7eb;
   border-left:4px solid #2563eb;
@@ -340,16 +342,13 @@ main section{margin-bottom:48px;}
 .experience-main{
   flex:1;
   min-width:0;
+  overflow-wrap:anywhere;
 }
 
 .experience-main h3{
   margin:0 0 2px;
   font-size:1rem;
   color:#003366;
-}
-
-#exploration .experience-main h3{
-  overflow-wrap:anywhere;
 }
 
 .experience-main p{
@@ -368,19 +367,10 @@ main section{margin-bottom:48px;}
   color:#64748b;
 }
 
-.experience-item--summary{
-  flex-wrap:wrap;
-  row-gap:6px;
-}
-
-.experience-summary{
-  flex:0 0 calc(100% - 128px);
-  min-width:0;
-  margin:0 0 0 128px;
+.experience-focus{
   color:#444;
   font-size:.88rem;
-  line-height:1.5;
-  overflow-wrap:anywhere;
+  font-weight:400;
 }
 
 /* Use the shared experience card and icon dimensions for both sections. */
@@ -408,38 +398,60 @@ main section{margin-bottom:48px;}
   height:100%;
 }
 
-@media(max-width:700px){
+/* Respond to the actual card width, including beside the desktop sidebar. */
+@container(max-width:560px){
   .experience-item{
-    align-items:flex-start;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:100px minmax(0,1fr);
+    align-content:center;
+    min-height:184px;
+    gap:8px 16px;
   }
 
   .experience-image{
-    flex-basis:100px;
+    grid-column:1;
+    grid-row:1;
     width:100px;
     height:30px;
   }
 
   .experience-image--ailab{
-    flex-basis:100px;
     width:100px;
     height:30px;
   }
 
   .experience-main{
-    flex:1 1 calc(100% - 120px);
+    grid-column:2;
+    grid-row:1;
   }
 
   .experience-meta{
-    flex-basis:calc(100% - 116px);
+    grid-column:2;
+    grid-row:2;
     text-align:left;
     white-space:normal;
-    margin-left:116px;
+  }
+}
+
+@container(max-width:420px){
+  .experience-item{
+    grid-template-columns:minmax(0,1fr);
+    min-height:224px;
   }
 
-  .experience-summary{
-    flex-basis:calc(100% - 116px);
-    margin-left:116px;
+  .experience-main{
+    grid-column:1;
+    grid-row:2;
   }
 
+  .experience-meta{
+    grid-column:1;
+    grid-row:3;
+  }
+}
+
+@container(max-width:260px){
+  .experience-item{
+    min-height:248px;
+  }
 }
